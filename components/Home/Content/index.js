@@ -14,8 +14,8 @@ const Content = () => {
                 justifyContent={'center'}
                 flexDirection={'column'}
             >
-                <SearchQrCode/>
                 <LeitorQRODE />
+                <SearchQrCode/>
             </Flex>
         </>
     )

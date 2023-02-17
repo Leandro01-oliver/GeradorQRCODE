@@ -7,7 +7,7 @@ const SearchQRCODE = () =>{
 
     const {
         onChangerSearch,
-        handlerSubmite
+        search
     } =  useContext(GlobalProvider);
 
     return(
@@ -15,11 +15,17 @@ const SearchQRCODE = () =>{
       <Box 
       w={'100%'}
       maxW={'780px'}
-      mb={'5rem'}
+      mt={'2.5rem'}
       >
+        <Box
+        mb={'.5rem'}
+        >
+          Tamanho de caracter digitado <strong>{search.length}</strong>
+        </Box>
          <Textarea
-           h={'300px'}
+          h={'250px'}
           resize={'none'}
+          maxLength={'20000'}
           onChange={onChangerSearch}
          />
         </Box>
