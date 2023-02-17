@@ -9,7 +9,6 @@ const Content = () => {
             <Flex
                 w={'100%'}
                 p={'1rem'}
-                h={'calc(100vh - 50px)'}
                 alignItems={'center'}
                 justifyContent={'center'}
                 flexDirection={'column'}
