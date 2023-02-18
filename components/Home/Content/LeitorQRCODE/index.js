@@ -1,6 +1,6 @@
+import QRCode from "react-qr-code"
 import { Flex } from "@chakra-ui/react"
 import { useContext } from "react";
-import QRCode from "react-qr-code"
 import { GlobalProvider } from "../../../../context/GlobalContext";
 import DownloadQRCODE from "../DownloadQRCODE";
 
@@ -21,7 +21,7 @@ const LeitorQRODE = () => {
                 alignItems={'center'}
                 position={'relative'}
             >
-                <DownloadQRCODE/>
+                {/* <DownloadQRCODE/> */}
                 <QRCode
                     value={textQr}
                     style={{
