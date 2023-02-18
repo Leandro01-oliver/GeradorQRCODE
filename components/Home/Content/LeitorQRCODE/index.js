@@ -21,7 +21,7 @@ const LeitorQRODE = () => {
                 alignItems={'center'}
                 position={'relative'}
             >
-                {/* <DownloadQRCODE/> */}
+                <DownloadQRCODE/>
                 <QRCode
                     value={textQr}
                     style={{
