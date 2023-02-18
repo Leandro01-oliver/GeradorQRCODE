@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import LeitorQRODE from "./LeitorQRCODE";
-import SearchQrCode from "./SearchQRCODE";
+import TextQRCODE from "./TextQRCODE";
 
 const Content = () => {
 
@@ -14,7 +14,7 @@ const Content = () => {
                 flexDirection={'column'}
             >
                 <LeitorQRODE />
-                <SearchQrCode/>
+                <TextQRCODE/>
             </Flex>
         </>
     )

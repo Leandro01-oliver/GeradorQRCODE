@@ -1,25 +1,29 @@
-import { Box, Flex } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 import { useContext } from "react";
 import QRCode from "react-qr-code"
 import { GlobalProvider } from "../../../../context/GlobalContext";
+import DownloadQRCODE from "../DownloadQRCODE";
 
 const LeitorQRODE = () => {
 
     const {
-        search
+        textQr
     } = useContext(GlobalProvider);
 
     return (
         <>
             <Flex
+                mt={'1rem'}
                 bg={'#fff'}
-                w={'320px'}
-                h={'320px'}
+                w={'305px'}
+                h={'305px'}
                 justifyContent={'center'}
                 alignItems={'center'}
+                position={'relative'}
             >
+                <DownloadQRCODE/>
                 <QRCode
-                    value={search}
+                    value={textQr}
                     style={{
                         width: '290px',
                         height: '290px'

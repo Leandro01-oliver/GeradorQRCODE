@@ -5,28 +5,25 @@ const GlobalProvider = createContext({});
 
 const GlobalContext = ({children})=>{
 
-    const [search,setSearch] = useState("");
+    const [textQr,setTextQr] = useState("");
 
-    const onChangerSearch = (e)=>{
-        setSearch(e.target.value)
+    const onChangerTextQr = (e)=>{
+        setTextQr(e.target.value)
     }
-
-     const [submit,setSubmit] = useState(false);
-
-    const handlerSubmite = () => setSubmit(!submit);
 
     const [darkMode, setDarkmode] = useState(false);
 
     const handlerDarkMode = () => setDarkmode(!darkMode);
 
+    const [downloadQrCode,setDownloadQrCode] = useState("");
+
     const value = {
-        search,
-        setSearch,
-        onChangerSearch,
-        handlerSubmite,
-        submit,
+        textQr,
+        onChangerTextQr,
         darkMode,
-        handlerDarkMode
+        handlerDarkMode,
+        downloadQrCode,
+        setDownloadQrCode
     }
 
     return(

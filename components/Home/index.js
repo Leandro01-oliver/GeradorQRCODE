@@ -3,10 +3,11 @@ import Content from "./Content"
 
 const HomeComponent = () =>{
 
+
     return(
         <>
           <NavBar/>
-          <Content/>
+          <Content />
         </>
     )
 }
