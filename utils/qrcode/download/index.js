@@ -8,7 +8,7 @@ const downloadQRCODE =  (
         textQr :  textQr
     }
 
-    axios.post("/api/qrcode/download", data)
+    axios.get("/api/qrcode/download", data)
     .then((res)=>{
         // setDownloadQrCode(res.data)
         console.log(res.data);
