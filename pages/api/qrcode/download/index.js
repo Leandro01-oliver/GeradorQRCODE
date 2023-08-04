@@ -8,11 +8,10 @@ const handlerDownloadQRCode = async (req, res) => {
     const { textQr } = req.body;
 
     if (req.method == "POST") {
-        const file = `${randomUUID()}.png`;
-        const filename = path.join(os.homedir(), 'Downloads', file);
+        const file = `D://${randomUUID()}.png`;
         try {
             await new Promise((resolve, reject) => {
-                qr.toFileStream(fs.createWriteStream(filename), textQr, { width: 500 }, (err) => {
+                qr.toFileStream(fs.createWriteStream(file), textQr, { width: 500 }, (err) => {
                     if (err) {
                         reject(err); // Pass the error to the promise rejection
                     } else {
