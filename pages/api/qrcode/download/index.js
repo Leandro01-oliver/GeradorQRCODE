@@ -6,8 +6,6 @@ import path from 'path';
 
 const handlerDownloadQRCode = async (req, res) => {
     const { textQr } = req.body;
-
-    if (req.method == "POST") {
         const file = `D://${randomUUID()}.png`;
         try {
             await new Promise((resolve, reject) => {
@@ -32,12 +30,6 @@ const handlerDownloadQRCode = async (req, res) => {
                 result: "Erro ao gerar o QRCODE"
             });
         }
-    } else {
-        res.status(405).json({
-            type: "error",
-            result: "Método não permitido"
-        });
-    }
 };
 
 export default handlerDownloadQRCode;
