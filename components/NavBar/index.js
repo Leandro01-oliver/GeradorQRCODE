@@ -2,8 +2,12 @@
 import { Flex } from "@chakra-ui/react"
 import DarkMode from "./DarkMode"
 import Logo from "./Logo"
+import { useState } from "react"
 
 const NavBar = () => {
+
+  const [search,setSearch] = useState("teste");
+
     return(
         <>
           <Flex
@@ -17,6 +21,7 @@ const NavBar = () => {
           <Logo/>
           <DarkMode/>
           </Flex>
+          
         </>
     )
 }

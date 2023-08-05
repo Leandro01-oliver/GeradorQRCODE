@@ -1,28 +1,26 @@
 import { Flex } from "@chakra-ui/react";
-import { useContext } from "react";
-import { GlobalProvider } from "../../../../context/GlobalContext";
-import { downloadQRCODE } from "../../../../utils/qrcode/download";
 import { GrDocumentDownload } from "react-icons/gr"
+import { saveAs } from 'file-saver';
+import { v4 as uuidv4 } from 'uuid';
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { downloadQRCODE } from "../../../../utils/qrcode/download";
 
-const DownloadQRCODE = () =>{
-
-    const {
-         textQr
-    } =  useContext(GlobalProvider);
+const DownloadQRCODE = (
+  props
+) =>{
 
     const notify = () => toast.success("Dowload realizado com sucesso");
 
     return (
         <>
           <Flex
-           w={'30px'}
-           h={'30px'}
+           w={'40px'}
+           h={'40px'}
            boxShadow={'0 0 10px 0 rgba(0,0,0,.25)'}
            borderRadius={'50%'}
            position={'absolute'}
-           top={'-1rem'}
+           bottom={'-1rem'}
            right={'-1rem'}
            justifyContent={'center'}
            alignItems={'center'}
@@ -30,8 +28,10 @@ const DownloadQRCODE = () =>{
            cursor={'pointer'}
            onClick={()=>{
             notify();
+            const guid = uuidv4();
             downloadQRCODE(
-              textQr
+              props.qrCodeUrl,
+              `${guid}.png`
             )
            }}
           >

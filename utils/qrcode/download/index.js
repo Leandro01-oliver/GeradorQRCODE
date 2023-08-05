@@ -1,22 +1,12 @@
 import axios from "axios";
+import { randomUUID } from "crypto";
 
 const downloadQRCODE =  (
-    textQr
+    url,
+    file
 ) =>{
 
-    const data = {
-        textQr :  textQr
-    }
-
-    axios.get("/api/qrcode/download", data)
-    .then((res)=>{
-        // setDownloadQrCode(res.data)
-        console.log(res.data);
-    }) 
-    .catch((err)=>{
-        // setDownloadQrCode(err)
-        console.log(err);
-    })
+    saveAs(url, file);
 }
 
 export  { downloadQRCODE }
